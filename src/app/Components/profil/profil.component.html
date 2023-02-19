@@ -1,0 +1,88 @@
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Kullanıcı ID</th>
+        <th scope="col">Metan</th>
+       
+      </tr>
+    </thead>
+     <tbody>
+         
+      <tr *ngFor="let item of degerler2 | orderBy:'-metan' ; let indexTutanDegiskenim = index"> <!-- buradaki degerler2, profil.component.ts içinde eklediğimiz array -->
+        <th scope="row">{{ indexTutanDegiskenim+ 1}}</th>
+        <td>{{  item.userid }}</td>
+        <td>{{item.metan}}</td>
+        
+      </tr>
+       
+    </tbody>
+</table>
+
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Kullanıcı ID</th>
+        <th scope="col">Bütan</th>
+       
+      </tr>
+    </thead>
+     <tbody>
+         
+      <tr *ngFor="let item of degerler2 | orderBy:'-butan' ; let indexTutanDegiskenim = index"> <!-- buradaki degerler2, profil.component.ts içinde eklediğimiz array -->
+        <th scope="row">{{indexTutanDegiskenim + 1}}</th>
+        <td>{{ item.userid }}</td>
+        <td>{{item.butan}}</td>
+        
+      </tr>
+       
+    </tbody>
+</table>
+
+
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Kullanıcı ID</th>
+        <th scope="col">Propan</th>
+       
+      </tr>
+    </thead>
+     <tbody>
+         
+      <tr *ngFor="let item of degerler2 | orderBy:'-propan' ; let indexTutanDegiskenim = index"> <!-- buradaki degerler2, profil.component.ts içinde eklediğimiz array -->
+        <th scope="row">{{indexTutanDegiskenim + 1}}</th>
+        <td>{{ item.userid }}</td>
+        <td>{{item.propan}}</td>
+        
+      </tr>
+       
+    </tbody>
+</table>
+
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Kullanıcı ID</th>
+        <th scope="col">Karbon Monoksit</th>
+       
+      </tr>
+    </thead>
+     <tbody>
+         
+      <tr *ngFor="let item of degerler2 | orderBy:'-karbonMonoksit' ; let indexTutanDegiskenim = index"> <!-- buradaki degerler2, profil.component.ts içinde eklediğimiz array -->
+        <th scope="row">{{indexTutanDegiskenim + 1}}</th>
+        <td>{{ item.userid }}</td>
+        <td>{{item.karbonMonoksit}}</td>
+        
+      </tr>
+       
+    </tbody>
+</table>
+    
+ 
+ 
+    

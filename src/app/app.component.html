@@ -1,0 +1,102 @@
+<app-header></app-header>
+ 
+<div class="container">
+  <div class="row d-flex justify-content-center"> <!-- satır ekledik, satır içerisinde tamamı 12 tane olan sütun bulunmaktadır.-->
+    
+    <div class="col-sm-2 mx-auto " style="position: sticky;  position: -webkit-sticky;
+    top: 20px; background-color:antiquewhite; height: 30%; border-radius: 10px; "> <!-- satır içine 4lük sütün ekledik-->
+      <mat-list  >
+        <mat-list-item><a routerLink="/" type="button" class="btn btn-primary w-100"   >Tüm Değerler</a></mat-list-item>
+         
+        <mat-list-item><a routerLink="/Profil" type="button" class="btn btn-danger w-100"   >Riskli Değerler</a></mat-list-item>
+         
+        <mat-list-item><a href="https://wa.me/05547640500" type="button" class="btn btn-success w-100"    target="_blank" >Bilgi Edinin </a></mat-list-item>
+        
+        <mat-list-item> <button  type="button" class="btn btn-warning w-100" (click)="openPopup()"   >Önemli Bilgiler</button></mat-list-item>
+        <!--form modal-->
+        <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+          <div class="modal-dialog modal-fullscreen" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">ÖNEMLİ BİLGİLER</h4>
+              </div>
+              <div class="modal-body">
+                <p>Teneffüs ettiğimiz hava hangi gazlardan oluşur?
+
+                  En genel anlamda bilinen kompozisyon ile teneffüs ettiğimiz hava;
+                  
+                  %78.1 Azot
+                  %20.9 Oksijen
+                  %1 Argon ve diğerleri
+                  
+                  ya da daha detay açılım ile <br><br>
+                  
+                  <ul>
+                    <li>Azot(N2)   ; 78.084%</li>
+                    <li>  Oksijen(O2)  ; 20.9476%</li>
+                    <li>  Argon(Ar)   ; 0.934%</li>
+                    <li>  Karbondioksit(CO2)  ;0.0314%</li>
+                    <li>  Neon(Ne)    ;0.001818%</li>
+                    <li>  Metan(CH4)   ;0.0002%</li>
+                    <li>  Helyum(He)   ;0.000524%</li>
+                    <li>  Kripton(Kr)   ;0.000114%</li>
+                    <li>  Hidrojen(H2)   ;0.00005%</li>
+                    <li>  Xenon(Xe)    ;0.0000087%></li>
+                </ul>
+                  
+                  gazlardan oluşur.
+                  
+                  İnsan yaşamındaki en önemli gaz hangisi ve yaşamsal önem düzeyleri nedir?
+                  
+                  Yaşadığımız her alanda yetersizliği ya da yokluğu ile yaşamımızı anında tehlikeye sokabilen ya da sonlandırabilen en önemli gaz Oksijen(O2) dir.
+                  
+                  Oksijenin, teneffüs ettiğimiz ortam içerisindeki normal seviyesi %20.9 dur. Bu konsantrasyon ile ilgili olarak, tüm dünyanın ortak kabul ettiği müsaade edilebilen alt limit %19.5 , üst limit ise %23.5 dür.
+                  
+                  Ortamda bulunacak %24 oranında Oksijen gazı ile üzerimizdeki elbiselerin çok kolayca tutuşabildiğini biliyor musunuz?
+                  
+                  Peki Oksijen gazının ortamdaki yüzdesinin, müsaade edilen limitlerin altına düşmesi halinde neler olabilir inceleyelim
+                  
+                  Öncelikle bir ortamda oksijen neden azalır, bunu anlamamız lazım.
+                  
+                  Kapalı bir mekân içindeki OKSİJEN YETERSİZLİĞİ ya tüketim sonucu ya da oksijenin bir diğer gazla yer değiştirmesi sonucu oluşabilir.
+                  
+                  Oksijenin tüketimi ise yanıcı maddelerin yanması esnasında(ısıtma,kaynak,kesme v.b. gibi) oluşur. En önemli oksijen tüketimi bakteriyel oluşumlarda söz konusudur. Bunun en çarpıcı örneği de fermantasyondur. Ayrıca kimyasal reaksiyon ile de(demirlerin oksitlenmesinde olduğu gibi) oksijen tüketimi söz konusudur. Kapalı mekan içerisindeki insan sayısı ve onların fiziksel aktiviteleri de tüketim hızını belirleyici diğer etkenlerdir.
+                  
+                  Oksijen yetersizliğinin ikinci kaynağı da daha önce belirtildiği gibi O2 gazının bir diğer gaz ile yer değiştirmesidir. Bu tür gazlar HELYUM, ARGON, ve AZOT tur. Ayrıca, doğal olarak kanalizasyon kanallarında, stok silolarında, kuyularda, tünellerde oluşabilen CO2 gazı da yine aynı özelliği göstermektedir. Yukarıda verilen tüm gazlar toksik olmadıkları halde insan sağlığı açısından oldukça tehlikeli kabul edilir. Bu anlamda azot(N2) ve karbondioksit(CO2) gazlarının oksijenle yer değiştirmesi halinde ani ölümlerin meydana gelmesi kaçınılmazdır.
+                  
+                  Farklı oksijen oranları için farklı zarar düzeyleri ise şu şekildedir:
+                  
+                  %20.9-23.5: Müsaade edilen maksimum düzey.Herhangi bir etki yok.
+                  %20.9 : Ortam havasında normal olarak bulunan düzey.Herhangi bir etki yok.
+                  %19.5 : Müsaade edilen minimum düzey.Herhangi bir etki yok
+                  %15-19 : Aktif çalışma kabiliyetinde kayıp.Koordinasyonun bozukluğu ve koroner yetmezlik,dolaşım ve akciğer rahatsızlığı olanlarda erken belirtilere yol açabilir.
+                  %12-15 : Solunum ve nabız artışı,koordinasyon,algı ve yargının bozulması.
+                  %10-12 : Solunumda gerek hız gerekse de derinlikte daha ileri bir artış,zayıf yargı ve dudaklarda morlaşma.
+                  %8-10 : Zeka kayıp emareleri,fenalaşma, şuur kaybı, yüzde kül rengi, dudaklarda morlaşma, bulantı ve kusma.
+                  %8-6 : 8 dakikada- %100 ölümle sonuçlanma; 6 dakikada-% 50 ölümle sonuçlanma; 4-5 dakikada- doğru müdahale ile kurtarılma ihtimali
+                  %4-6 : 40 saniyede koma, kasılma, çırpınma, solunumun duruşu ve ölüm.
+                  <BR>
+                    KAYNAK: https://www.maden.org.tr/genel/bizden_detay.php?kod=8735
+          
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger"   (click)="closePopup()"> Kapat </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--form modal bitti-->
+      </mat-list>
+
+    </div>
+    <div class="col-sm-9 mx-auto " style="background-color:blanchedalmond;border-radius:  10px;float:right ;  "> <!-- satır içine 8lik sütünekledik-->
+      
+      <router-outlet></router-outlet>
+
+    </div>  
+  </div>
+</div>
+
+<app-footer></app-footer>
+
+ 

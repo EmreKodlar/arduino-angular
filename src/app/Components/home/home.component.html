@@ -1,0 +1,38 @@
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Kullanıcı ID</th>
+        <th scope="col">Metan</th>
+        <th scope="col">Bütan</th>
+        <th scope="col">Propan</th>
+        <th scope="col">Karbon Monoksit</th>
+        <th scope="col">Temiz Hava</th>
+        <th scope="col">Tarih</th>
+       
+        <th scope="col">Sil</th>
+        
+      </tr>
+    </thead>
+     <tbody>
+      <tr *ngFor="let item of degerler; let indexTutanDegiskenim = index"> <!-- buradaki degerler, home.component.ts içinde eklediğimiz array -->
+        <th scope="row">{{indexTutanDegiskenim + 1}}</th>
+        <td>{{ item.userid }}</td>
+        <td>{{item.metan}}</td>
+        <td>{{item.butan}}</td>
+        <td>{{item.propan}}</td>
+        <td>{{item.karbonMonoksit}}</td>
+        <td>{{item.havaTemiz}}</td>
+        <td>{{item.degerDate}}</td>
+         
+        <td><button type="button" class="btn btn-danger " (click)='DeleteDeger(item._id)'> Sil </button></td>
+      
+      </tr>
+       
+    </tbody>
+</table>
+
+ 
+ 
+    
+ 
